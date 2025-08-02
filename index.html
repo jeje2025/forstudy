@@ -1,0 +1,1969 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영어 부정문 완벽 정복 가이드</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(to bottom, #ffeef8 0%, #fff0f5 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #ff6b9d 0%, #feca57 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            margin-bottom: 25px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(255, 107, 157, 0.3);
+        }
+        
+        h1 {
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        header p {
+            font-size: clamp(0.9rem, 3vw, 1.1rem);
+            opacity: 0.95;
+        }
+        
+        .tabs {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(255, 107, 157, 0.1);
+            overflow: hidden;
+            gap: 2px;
+            padding: 2px;
+        }
+        
+        .tab {
+            flex: 1;
+            min-width: 120px;
+            padding: 12px 16px;
+            text-align: center;
+            cursor: pointer;
+            background: #fff5f9;
+            border: none;
+            transition: all 0.3s ease;
+            font-size: clamp(0.85rem, 2.5vw, 1rem);
+            font-weight: 500;
+            color: #ff6b9d;
+            border-radius: 13px;
+        }
+        
+        .tab:hover {
+            background: #ffe0ec;
+            transform: translateY(-1px);
+        }
+        
+        .tab.active {
+            background: linear-gradient(135deg, #ff6b9d, #ff8787);
+            color: white;
+            box-shadow: 0 3px 10px rgba(255, 107, 157, 0.3);
+        }
+        
+        .content {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .content.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .section {
+            background: white;
+            padding: 25px 20px;
+            margin-bottom: 20px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(255, 107, 157, 0.08);
+            border: 1px solid rgba(255, 107, 157, 0.1);
+        }
+        
+        h2 {
+            color: #ff6b9d;
+            margin-bottom: 20px;
+            font-size: clamp(1.4rem, 4vw, 1.8rem);
+            border-bottom: 2px solid #ffe0ec;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            color: #ff8787;
+            margin: 20px 0 15px 0;
+            font-size: clamp(1.1rem, 3vw, 1.3rem);
+        }
+        
+        .highlight-box {
+            background: linear-gradient(to right, #fff5f9, #ffeef8);
+            border-left: 4px solid #ff6b9d;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+        
+        .highlight-box strong {
+            color: #ff6b9d;
+        }
+        
+        .word-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 15px 0;
+        }
+        
+        .word-item {
+            background: linear-gradient(135deg, #ffe0ec, #fff5f9);
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-family: 'Courier New', monospace;
+            font-weight: 600;
+            color: #ff6b9d;
+            font-size: clamp(0.85rem, 2.5vw, 1rem);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            overflow-x: auto;
+            display: block;
+        }
+        
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ffe0ec;
+            min-width: 120px;
+        }
+        
+        th {
+            background: #fff5f9;
+            font-weight: 600;
+            color: #ff6b9d;
+            position: sticky;
+            top: 0;
+        }
+        
+        tr:hover {
+            background: #fff5f9;
+        }
+        
+        .warning {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+        
+        .summary-table {
+            background: linear-gradient(to right, #fff5f9, #ffeef8);
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 30px;
+        }
+        
+        code {
+            background: #ffe0ec;
+            padding: 2px 6px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: #ff6b9d;
+        }
+        
+        /* 단어 카드 스타일 */
+        .vocab-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .vocab-card {
+            background: linear-gradient(135deg, #fff5f9, white);
+            border: 2px solid #ffe0ec;
+            border-radius: 20px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            min-height: 180px;
+        }
+        
+        .vocab-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(255, 107, 157, 0.2);
+            border-color: #ff6b9d;
+        }
+        
+        .vocab-card.mastered {
+            background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+            border-color: #81c784;
+            opacity: 0.85;
+        }
+        
+        .mastered-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #4caf50;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            display: none;
+            font-weight: 600;
+        }
+        
+        .vocab-card.mastered .mastered-badge {
+            display: block;
+        }
+        
+        .vocab-word {
+            font-size: clamp(1.3rem, 3.5vw, 1.5rem);
+            font-weight: 700;
+            color: #ff6b9d;
+            margin-bottom: 10px;
+            font-family: 'Georgia', serif;
+        }
+        
+        .vocab-meaning {
+            font-size: clamp(1rem, 2.5vw, 1.1rem);
+            color: #ff8787;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+        
+        .vocab-example {
+            font-size: clamp(0.85rem, 2vw, 0.95rem);
+            color: #666;
+            line-height: 1.5;
+            padding-top: 15px;
+            border-top: 1px solid #ffe0ec;
+            font-style: italic;
+        }
+        
+        .vocab-example strong {
+            color: #ff6b9d;
+            font-style: normal;
+            text-decoration: underline;
+        }
+        
+        /* 학습 컨트롤 버튼 */
+        .study-controls {
+            display: flex;
+            gap: 10px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        
+        .control-btn {
+            padding: 12px 20px;
+            background: linear-gradient(135deg, #ff6b9d, #ff8787);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: clamp(0.9rem, 2.5vw, 1rem);
+            transition: all 0.3s ease;
+            font-weight: 500;
+            box-shadow: 0 5px 15px rgba(255, 107, 157, 0.3);
+        }
+        
+        .control-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 107, 157, 0.4);
+        }
+        
+        .control-btn:active {
+            transform: translateY(0);
+        }
+        
+        .quizlet-btn {
+            background: linear-gradient(135deg, #4255ff, #5468ff);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .quizlet-btn:hover {
+            background: linear-gradient(135deg, #3648e5, #4559e5);
+        }
+        
+        /* 플래시카드 스타일 */
+        .flashcard-container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px 10px;
+        }
+        
+        .flashcard-progress {
+            text-align: center;
+            font-size: clamp(1rem, 3vw, 1.2rem);
+            margin-bottom: 15px;
+            color: #ff6b9d;
+            font-weight: 600;
+        }
+        
+        .swipe-instruction {
+            text-align: center;
+            color: #ff8787;
+            margin-bottom: 20px;
+            font-size: clamp(0.85rem, 2.5vw, 1rem);
+            background: #fff5f9;
+            padding: 10px;
+            border-radius: 20px;
+        }
+        
+        .flashcard-wrapper {
+            position: relative;
+            height: 350px;
+            margin-bottom: 25px;
+        }
+        
+        .flashcard {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transform-style: preserve-3d;
+            transition: transform 0.6s, left 0.3s ease-out, opacity 0.3s ease-out;
+            cursor: pointer;
+            left: 0;
+        }
+        
+        .flashcard.swipe-left {
+            left: -120%;
+            opacity: 0;
+            transform: rotate(-30deg);
+        }
+        
+        .flashcard.swipe-right {
+            left: 120%;
+            opacity: 0;
+            transform: rotate(30deg);
+        }
+        
+        .flashcard.flipped {
+            transform: rotateY(180deg);
+        }
+        
+        .flashcard-front, .flashcard-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            background: linear-gradient(135deg, white, #fff5f9);
+            border-radius: 25px;
+            box-shadow: 0 15px 40px rgba(255, 107, 157, 0.2);
+            border: 2px solid #ffe0ec;
+        }
+        
+        .flashcard-back {
+            transform: rotateY(180deg);
+            background: linear-gradient(135deg, #fff5f9, white);
+        }
+        
+        .flashcard-word {
+            font-size: clamp(2.5rem, 7vw, 3rem);
+            font-weight: 700;
+            color: #ff6b9d;
+            font-family: 'Georgia', serif;
+            text-align: center;
+        }
+        
+        .flashcard-meaning {
+            font-size: clamp(1.6rem, 5vw, 2rem);
+            color: #ff8787;
+            margin-bottom: 25px;
+            text-align: center;
+            font-weight: 500;
+        }
+        
+        .flashcard-example {
+            font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+            color: #666;
+            text-align: center;
+            line-height: 1.6;
+            font-style: italic;
+        }
+        
+        .flashcard-controls {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .flashcard-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: clamp(0.85rem, 2.5vw, 1rem);
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .flashcard-btn.prev, .flashcard-btn.next {
+            background: #fff5f9;
+            color: #ff6b9d;
+            border: 2px solid #ffe0ec;
+        }
+        
+        .flashcard-btn.know {
+            background: linear-gradient(135deg, #4caf50, #66bb6a);
+            color: white;
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+        }
+        
+        .flashcard-btn.reset-btn {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
+            color: white;
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+        }
+        
+        .flashcard-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+        
+        .flashcard-stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 25px;
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            text-align: center;
+            background: #fff5f9;
+            padding: 15px 25px;
+            border-radius: 20px;
+            min-width: 120px;
+        }
+        
+        .stat-label {
+            display: block;
+            color: #ff8787;
+            margin-bottom: 5px;
+            font-size: clamp(0.85rem, 2.5vw, 1rem);
+        }
+        
+        .stat-value {
+            font-size: clamp(1.8rem, 5vw, 2rem);
+            font-weight: 700;
+            color: #ff6b9d;
+        }
+        
+        /* 발음 버튼 스타일 */
+        .speak-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: linear-gradient(135deg, #ff6b9d, #ff8787);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: 1.3rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+            box-shadow: 0 5px 15px rgba(255, 107, 157, 0.3);
+        }
+        
+        .speak-btn:hover {
+            transform: scale(1.1) rotate(10deg);
+            box-shadow: 0 8px 20px rgba(255, 107, 157, 0.4);
+        }
+        
+        .speak-btn:active {
+            transform: scale(0.95);
+        }
+        
+        /* 부정문 문장 복습 스타일 */
+        .sentence-card {
+            background: white;
+            border-radius: 20px;
+            padding: 25px 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 20px rgba(255, 107, 157, 0.08);
+            border: 2px solid #ffe0ec;
+            transition: all 0.3s ease;
+        }
+        
+        .sentence-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 107, 157, 0.15);
+            border-color: #ff6b9d;
+        }
+        
+        .sentence-type {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff6b9d, #ff8787);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: clamp(0.75rem, 2vw, 0.85rem);
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+        
+        .sentence-card h3 {
+            color: #ff6b9d;
+            margin-bottom: 20px;
+            font-size: clamp(1.2rem, 3.5vw, 1.5rem);
+        }
+        
+        .sentence-original {
+            background: linear-gradient(to right, #fff5f9, #ffeef8);
+            padding: 20px;
+            border-radius: 15px;
+            font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-family: 'Georgia', serif;
+        }
+        
+        .sentence-original .highlight {
+            background: linear-gradient(to right, #ffd700, #ffed4e);
+            padding: 2px 8px;
+            border-radius: 5px;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .sentence-breakdown, .sentence-translation, .sentence-explanation {
+            margin-bottom: 20px;
+        }
+        
+        .sentence-card h4 {
+            color: #ff8787;
+            margin-bottom: 10px;
+            font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+        }
+        
+        .sentence-breakdown p {
+            font-style: italic;
+            color: #666;
+            line-height: 1.8;
+            font-size: clamp(0.85rem, 2vw, 0.95rem);
+        }
+        
+        .sentence-translation p {
+            background: linear-gradient(to right, #e8f5e9, #f1f8e9);
+            padding: 15px;
+            border-radius: 10px;
+            line-height: 1.8;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+        }
+        
+        .sentence-explanation {
+            background: linear-gradient(to right, #fff9c4, #fffde7);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #ffd54f;
+        }
+        
+        .sentence-explanation p {
+            line-height: 1.8;
+            color: #333;
+            font-size: clamp(0.85rem, 2vw, 0.95rem);
+        }
+        
+        .sentence-explanation strong {
+            color: #ff6b9d;
+        }
+        
+        /* 모바일 최적화 */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            header {
+                padding: 20px 15px;
+                margin-bottom: 20px;
+            }
+            
+            .section {
+                padding: 20px 15px;
+            }
+            
+            table {
+                font-size: 0.85rem;
+            }
+            
+            th, td {
+                padding: 8px 10px;
+                min-width: 100px;
+            }
+            
+            .flashcard-wrapper {
+                height: 300px;
+            }
+            
+            .flashcard-front, .flashcard-back {
+                padding: 20px;
+            }
+            
+            .vocab-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .sentence-card {
+                padding: 20px 15px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .tabs {
+                gap: 1px;
+                padding: 1px;
+            }
+            
+            .tab {
+                font-size: 0.8rem;
+                padding: 10px 12px;
+                min-width: 80px;
+            }
+            
+            .flashcard-stats {
+                gap: 15px;
+            }
+            
+            .stat-item {
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>영어 부정문 완벽 정복 가이드 💕</h1>
+            <p>체계적으로 배우는 영어 부정 표현의 모든 것</p>
+        </header>
+        
+        <div class="tabs">
+            <button class="tab active" onclick="showTab('overview')">전체 개요</button>
+            <button class="tab" onclick="showTab('vocabulary')">단어 학습</button>
+            <button class="tab" onclick="showTab('sentences')">부정문 문장 복습</button>
+        </div>
+        
+        <div id="overview" class="content active">
+            <div class="section">
+                <h2>1. 준부정어 (Semi-negative Words)</h2>
+                <p>문장 속에 'not'이 없지만, 그 자체로 '거의 ~않다'라는 부정의 의미를 담고 있는 부사들입니다. 문법적으로는 긍정문 형태이지만, 의미상으로는 부정문으로 해석해야 합니다.</p>
+                
+                <div class="word-list">
+                    <span class="word-item">little</span>
+                    <span class="word-item">few</span>
+                    <span class="word-item">seldom</span>
+                    <span class="word-item">rarely</span>
+                    <span class="word-item">hardly</span>
+                    <span class="word-item">scarcely</span>
+                </div>
+                
+                <div class="highlight-box">
+                    💡 <strong>핵심 포인트:</strong> <code>little</code>과 <code>few</code> 앞에 <code>a</code>가 붙으면 (<code>a little</code>, <code>a few</code>) '조금 있는, 약간 있는'이라는 긍정의 의미로 바뀝니다. 의미 차이를 정확히 구분하는 것이 중요합니다.
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>2. 부정 접두사 (Negative Prefixes)</h2>
+                <p>단어 앞에 붙어 '아닌(not)' 또는 '반대(opposite)'의 의미를 만드는 접두사입니다.</p>
+            </div>
+            
+            <div class="section">
+                <h2>3. 부정의 의미를 포함하는 어휘 (Words with Inherent Negative Meaning)</h2>
+                <p>단어 자체에 '막다', '실패하다', '부인하다' 등 부정적인 의미가 내포되어 있어 문맥상 부정을 나타냅니다.</p>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>어휘</th>
+                            <th>의미</th>
+                            <th>예문</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>prevent A from B</strong></td>
+                            <td>A가 B하는 것을 막다</td>
+                            <td>The rain <strong>prevented</strong> us <strong>from</strong> going out. (비 때문에 우리는 외출하지 못했다.)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>prohibit A from B</strong></td>
+                            <td>A가 B하는 것을 금지하다</td>
+                            <td>The law <strong>prohibits</strong> drivers <strong>from</strong> using their phones. (법은 운전자들이 휴대폰을 사용하는 것을 금지한다.)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>fail to (do)</strong></td>
+                            <td>~하는 데 실패하다, ~하지 못하다</td>
+                            <td>He <strong>failed to</strong> keep his promise. (그는 약속을 지키지 못했다.)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>deny</strong></td>
+                            <td>부인하다, 거부하다</td>
+                            <td>She <strong>denied</strong> knowing anything about the plan. (그녀는 그 계획에 대해 아는 바가 없다고 부인했다.)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>undermine</strong></td>
+                            <td>(기반, 명성 등을) 약화시키다</td>
+                            <td>His constant criticism <strong>undermined</strong> her confidence. (그의 계속된 비판은 그녀의 자신감을 약화시켰다.)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>preclude</strong></td>
+                            <td>~을 못하게 하다, 불가능하게 하다</td>
+                            <td>A prior engagement <strong>precludes</strong> me from accepting your invitation. (선약이 있어서 당신의 초대를 수락할 수 없습니다.)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>elude</strong></td>
+                            <td>(교묘히) 피하다, 빠져나가다</td>
+                            <td>The suspect managed to <strong>elude</strong> the police. (그 용의자는 경찰을 교묘히 피했다.)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>be at odds with</strong></td>
+                            <td>~와 사이가 나쁘다, 불화하다</td>
+                            <td>His actions <strong>are at odds with</strong> his words. (그의 행동은 그의 말과 일치하지 않는다.)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="section">
+                <h2>4. 이중 부정 (Double Negation)</h2>
+                <p>부정어를 두 번 사용하여 <strong>강한 긍정</strong>을 나타내는 표현 방식입니다. '결코 ~가 아닌 것은 아니다'라는 논리로 이해할 수 있습니다.</p>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>표현</th>
+                            <th>의미</th>
+                            <th>예문</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>not without ~</strong></td>
+                            <td>~없이 ~하지는 않다 → 반드시 ~가 있다</td>
+                            <td>His speech was <strong>not without</strong> humor. (그의 연설에는 유머가 있었다.)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>no less than</strong></td>
+                            <td>~만큼이나, 다름 아닌</td>
+                            <td>He is <strong>no less than</strong> a genius. (그는 천재나 다름없다. = 그는 정말 천재다.)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>not uncommon</strong></td>
+                            <td>드물지 않다 → 흔하다</td>
+                            <td>It is <strong>not uncommon</strong> to see squirrels in this park. (이 공원에서 다람쥐를 보는 것은 흔한 일이다.)</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="warning">
+                    ⚠️ <strong>주의:</strong> 구어체에서 <code>I don't know nothing.</code>처럼 이중 부정을 사용하여 부정을 강조하는 경우도 있지만, 표준 문법에서는 강한 긍정으로 해석되므로 사용에 주의해야 합니다.
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>5. 수사적/문맥적 부정 (Rhetorical/Contextual Negation)</h2>
+                <p>직접적인 부정어 없이, 비교나 특정 구문을 통해 문맥적으로 부정의 의미를 전달하는 세련된 방식입니다.</p>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>표현</th>
+                            <th>의미</th>
+                            <th>예문</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>A is less B than C</strong></td>
+                            <td>A는 B라기보다는 오히려 C이다</td>
+                            <td>He is <strong>less</strong> a scholar <strong>than</strong> a journalist. (그는 학자라기보다는 언론인이다.)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>little more than</strong></td>
+                            <td>~에 지나지 않는, ~와 다름없는</td>
+                            <td>The plan is <strong>little more than</strong> a dream. (그 계획은 꿈에 지나지 않는다.)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>nothing more than</strong></td>
+                            <td>~에 지나지 않는, ~일 뿐인</td>
+                            <td>It was <strong>nothing more than</strong> a simple mistake. (그것은 사소한 실수에 불과했다.)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>stop short of -ing</strong></td>
+                            <td>~하기 직전에 멈추다, 가까스로 ~하지 않다</td>
+                            <td>He <strong>stopped short of</strong> calling her a liar. (그는 그녀를 거짓말쟁이라고 부르기 직전에 멈췄다.)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>anything but</strong></td>
+                            <td>결코 ~가 아닌 (=never)</td>
+                            <td>She is <strong>anything but</strong> shy. (그녀는 결코 수줍어하는 성격이 아니다.)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>far from</strong></td>
+                            <td>결코 ~가 아닌, ~와는 거리가 먼</td>
+                            <td>The result was <strong>far from</strong> what we expected. (결과는 우리가 예상했던 것과는 거리가 멀었다.)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>the last person to</strong></td>
+                            <td>결코 ~할 사람이 아닌</td>
+                            <td>He is <strong>the last person to</strong> tell a lie. (그는 결코 거짓말을 할 사람이 아니다.)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>apparently</strong></td>
+                            <td>(문맥에 따라) 겉보기에는 ~이지만 (실제로는 아닐 수 있음)</td>
+                            <td><strong>Apparently</strong>, it's a simple problem, but the solution is complex. (겉보기엔 간단한 문제 같지만, 해결책은 복잡하다.)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="section">
+                <h2>6. 가정법을 통한 숨은 부정 (Hidden Negation in Conditionals)</h2>
+                <p>가정법은 현재나 과거 사실의 반대를 가정하므로, 그 문장 속에는 '실제로는 그렇지 않다/않았다'라는 부정의 의미가 숨어있습니다.</p>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>표현</th>
+                            <th>의미</th>
+                            <th>예문</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Without / But for ~</strong></td>
+                            <td>~이 없다면 / ~이 없었다면</td>
+                            <td><strong>Without</strong> your help, I couldn't have succeeded. (네 도움이 없었다면, 나는 성공하지 못했을 것이다. → 네가 도와줘서 성공했다.)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>could have p.p.</strong></td>
+                            <td>~할 수도 있었는데 (하지 못했다)</td>
+                            <td>I <strong>could have passed</strong> the exam, but I didn't study enough. (시험에 합격할 수도 있었는데, 공부를 충분히 하지 않았다.)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>If I were you, I would...</strong></td>
+                            <td>내가 너라면, ~할 텐데</td>
+                            <td><strong>If I were you, I would not</strong> do that. (내가 너라면, 그렇게 하지 않을 것이다. → 너는 그렇게 하고 있다/하려고 한다.)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="summary-table">
+                <h3>요약: 부정 표현의 종류</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>구분</th>
+                            <th>핵심 내용</th>
+                            <th>대표 예시</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>준부정어</strong></td>
+                            <td>'not' 없이 '거의 ~않다'로 해석</td>
+                            <td>little, few, hardly, seldom</td>
+                        </tr>
+                        <tr>
+                            <td><strong>부정 접두사</strong></td>
+                            <td>단어에 '반대'의 의미 추가</td>
+                            <td>un-, in-, dis-, non-</td>
+                        </tr>
+                        <tr>
+                            <td><strong>부정 의미 어휘</strong></td>
+                            <td>동사/어휘 자체에 부정적 의미 내포</td>
+                            <td>prevent, fail, deny</td>
+                        </tr>
+                        <tr>
+                            <td><strong>이중 부정</strong></td>
+                            <td>부정어 두 개로 강한 긍정 표현</td>
+                            <td>no less than, not without</td>
+                        </tr>
+                        <tr>
+                            <td><strong>수사적/문맥적 부정</strong></td>
+                            <td>구문을 통해 간접적으로 부정 전달</td>
+                            <td>anything but, less A than B</td>
+                        </tr>
+                        <tr>
+                            <td><strong>가정법</strong></td>
+                            <td>반대 사실을 가정하여 부정의 의미 내포</td>
+                            <td>Without, could have p.p</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div id="vocabulary" class="content">
+            <div class="section">
+                <h2>핵심 단어 학습</h2>
+                <p>영어 독해와 작문에 필요한 중요 어휘들을 학습해보세요.</p>
+                
+                <div class="study-controls">
+                    <button class="control-btn" onclick="showAllWords()">전체 단어 보기</button>
+                    <button class="control-btn" onclick="showFlashcards()">플래시카드 학습</button>
+                    <button class="control-btn quizlet-btn" onclick="openQuizlet()">
+                        <span>퀴즐렛에서 학습하기</span>
+                        <svg style="width: 20px; height: 20px; margin-left: 5px; vertical-align: middle;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 6H6C4.89543 6 4 6.89543 4 8V18C4 19.1046 4.89543 20 6 20H16C17.1046 20 18 19.1046 18 18V14M14 4H20M20 4V10M20 4L10 14" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+                
+                <div id="wordList" class="vocab-container">
+                    <div class="vocab-card" data-word="causal" onclick="toggleMastered(this)">
+                        <div class="mastered-badge">✓ 외움</div>
+                        <div class="vocab-word">causal</div>
+                        <div class="vocab-meaning">인과적인</div>
+                        <div class="vocab-example">There is a <strong>causal</strong> relationship between smoking and lung cancer.</div>
+                    </div>
+                    
+                    <div class="vocab-card" data-word="variable" onclick="toggleMastered(this)">
+                        <div class="mastered-badge">✓ 외움</div>
+                        <div class="vocab-word">variable</div>
+                        <div class="vocab-meaning">변수들</div>
+                        <div class="vocab-example">We need to consider all the <strong>variables</strong> in this experiment.</div>
+                    </div>
+                    
+                    <div class="vocab-card" data-word="defendant" onclick="toggleMastered(this)">
+                        <div class="mastered-badge">✓ 외움</div>
+                        <div class="vocab-word">defendant</div>
+                        <div class="vocab-meaning">피고인</div>
+                        <div class="vocab-example">The <strong>defendant</strong> pleaded not guilty to all charges.</div>
+                    </div>
+                    
+                    <div class="vocab-card" data-word="charge" onclick="toggleMastered(this)">
+                        <div class="mastered-badge">✓ 외움</div>
+                        <div class="vocab-word">charge</div>
+                        <div class="vocab-meaning">혐의들</div>
+                        <div class="vocab-example">He faces multiple <strong>charges</strong> including fraud and embezzlement.</div>
+                    </div>
+                    
+                    <div class="vocab-card" data-word="citing" onclick="toggleMastered(this)">
+                        <div class="mastered-badge">✓ 외움</div>
+                        <div class="vocab-word">citing</div>
+                        <div class="vocab-meaning">인용하는</div>
+                        <div class="vocab-example">The professor emphasized the importance of <strong>citing</strong> sources properly.</div>
+                    </div>
+                    
+                    <div class="vocab-card" data-word="impractical" onclick="toggleMastered(this)">
+                        <div class="mastered-badge">✓ 외움</div>
+                        <div class="vocab-word">impractical</div>
+                        <div class="vocab-meaning">비현실적인</div>
+                        <div class="vocab-example">Your suggestion is <strong>impractical</strong> given our limited budget.</div>
+                    </div>
+                    
+                    <div class="vocab-card" data-word="asymmetrical" onclick="toggleMastered(this)">
+                        <div class="mastered-badge">✓ 외움</div>
+                        <div class="vocab-word">asymmetrical</div>
+                        <div class="vocab-meaning">비대칭적인</div>
+                        <div class="vocab-example">The building has an interesting <strong>asymmetrical</strong> design.</div>
+                    </div>
+                    
+                    <div class="vocab-card" data-word="rhetoric" onclick="toggleMastered(this)">
+                        <div class="mastered-badge">✓ 외움</div>
+                        <div class="vocab-word">rhetoric</div>
+                        <div class="vocab-meaning">수사학, 미사여구</div>
+                        <div class="vocab-example">His speech was full of empty <strong>rhetoric</strong> with no substance.</div>
+                    </div>
+                    
+                    <div class="vocab-card" data-word="esoteric" onclick="toggleMastered(this)">
+                        <div class="mastered-badge">✓ 외움</div>
+                        <div class="vocab-word">esoteric</div>
+                        <div class="vocab-meaning">소수만 이해하는</div>
+                        <div class="vocab-example">The professor's lecture on quantum physics was too <strong>esoteric</strong> for most students.</div>
+                    </div>
+                    
+                    <div class="vocab-card" data-word="allusion" onclick="toggleMastered(this)">
+                        <div class="mastered-badge">✓ 외움</div>
+                        <div class="vocab-word">allusion</div>
+                        <div class="vocab-meaning">암시, 간접적인 언급</div>
+                        <div class="vocab-example">The poem contains an <strong>allusion</strong> to Greek mythology.</div>
+                    </div>
+                    
+                    <div class="vocab-card" data-word="baffle" onclick="toggleMastered(this)">
+                        <div class="mastered-badge">✓ 외움</div>
+                        <div class="vocab-word">baffle</div>
+                        <div class="vocab-meaning">당황하게 하다</div>
+                        <div class="vocab-example">The magician's tricks completely <strong>baffled</strong> the audience.</div>
+                    </div>
+                    
+                    <div class="vocab-card" data-word="disenfranchise" onclick="toggleMastered(this)">
+                        <div class="mastered-badge">✓ 외움</div>
+                        <div class="vocab-word">disenfranchise</div>
+                        <div class="vocab-meaning">선거권을 박탈당한</div>
+                        <div class="vocab-example">Many citizens were <strong>disenfranchised</strong> due to unfair voting laws.</div>
+                    </div>
+                    
+                    <div class="vocab-card" data-word="compromise" onclick="toggleMastered(this)">
+                        <div class="mastered-badge">✓ 외움</div>
+                        <div class="vocab-word">compromise</div>
+                        <div class="vocab-meaning">타협</div>
+                        <div class="vocab-example">Both parties reached a <strong>compromise</strong> after lengthy negotiations.</div>
+                    </div>
+                    
+                    <div class="vocab-card" data-word="immoral" onclick="toggleMastered(this)">
+                        <div class="mastered-badge">✓ 외움</div>
+                        <div class="vocab-word">immoral</div>
+                        <div class="vocab-meaning">부도덕한</div>
+                        <div class="vocab-example">The company's <strong>immoral</strong> business practices were exposed by journalists.</div>
+                    </div>
+                    
+                    <div class="vocab-card" data-word="amoral" onclick="toggleMastered(this)">
+                        <div class="mastered-badge">✓ 외움</div>
+                        <div class="vocab-word">amoral</div>
+                        <div class="vocab-meaning">도덕 개념이 없는</div>
+                        <div class="vocab-example">The artificial intelligence system is <strong>amoral</strong>, lacking any sense of right or wrong.</div>
+                    </div>
+                    
+                    <div class="vocab-card" data-word="fungible" onclick="toggleMastered(this)">
+                        <div class="mastered-badge">✓ 외움</div>
+                        <div class="vocab-word">fungible</div>
+                        <div class="vocab-meaning">대체 가능한</div>
+                        <div class="vocab-example">Money is <strong>fungible</strong> because one dollar bill can replace another.</div>
+                    </div>
+                    
+                    <div class="vocab-card" data-word="untenable" onclick="toggleMastered(this)">
+                        <div class="mastered-badge">✓ 외움</div>
+                        <div class="vocab-word">untenable</div>
+                        <div class="vocab-meaning">지지할 수 없는</div>
+                        <div class="vocab-example">His position became <strong>untenable</strong> after the scandal was revealed.</div>
+                    </div>
+                    
+                    <div class="vocab-card" data-word="precludes" onclick="toggleMastered(this)">
+                        <div class="mastered-badge">✓ 외움</div>
+                        <div class="vocab-word">precludes</div>
+                        <div class="vocab-meaning">~을 막다, 배제하다</div>
+                        <div class="vocab-example">The contract <strong>precludes</strong> any possibility of early termination.</div>
+                    </div>
+                    
+                    <div class="vocab-card" data-word="quantum" onclick="toggleMastered(this)">
+                        <div class="mastered-badge">✓ 외움</div>
+                        <div class="vocab-word">quantum</div>
+                        <div class="vocab-meaning">양자, 상당한 양</div>
+                        <div class="vocab-example"><strong>Quantum</strong> mechanics revolutionized our understanding of physics.</div>
+                    </div>
+                    
+                    <div class="vocab-card" data-word="repudiate" onclick="toggleMastered(this)">
+                        <div class="mastered-badge">✓ 외움</div>
+                        <div class="vocab-word">repudiate</div>
+                        <div class="vocab-meaning">거부하다</div>
+                        <div class="vocab-example">The government decided to <strong>repudiate</strong> the controversial agreement.</div>
+                    </div>
+                    
+                    <div class="vocab-card" data-word="deterministic" onclick="toggleMastered(this)">
+                        <div class="mastered-badge">✓ 외움</div>
+                        <div class="vocab-word">deterministic</div>
+                        <div class="vocab-meaning">결정론적인</div>
+                        <div class="vocab-example">The universe may not be as <strong>deterministic</strong> as classical physics suggested.</div>
+                    </div>
+                    
+                    <div class="vocab-card" data-word="cynicism" onclick="toggleMastered(this)">
+                        <div class="mastered-badge">✓ 외움</div>
+                        <div class="vocab-word">cynicism</div>
+                        <div class="vocab-meaning">냉소주의</div>
+                        <div class="vocab-example">Years of broken promises led to widespread <strong>cynicism</strong> among voters.</div>
+                    </div>
+                    
+                    <div class="vocab-card" data-word="electorate" onclick="toggleMastered(this)">
+                        <div class="mastered-badge">✓ 외움</div>
+                        <div class="vocab-word">electorate</div>
+                        <div class="vocab-meaning">유권자 전체</div>
+                        <div class="vocab-example">The <strong>electorate</strong> showed their dissatisfaction in the recent election.</div>
+                    </div>
+                    
+                    <div class="vocab-card" data-word="imminent" onclick="toggleMastered(this)">
+                        <div class="mastered-badge">✓ 외움</div>
+                        <div class="vocab-word">imminent</div>
+                        <div class="vocab-meaning">임박한</div>
+                        <div class="vocab-example">Scientists warned that climate disaster is <strong>imminent</strong> without immediate action.</div>
+                    </div>
+                    
+                    <div class="vocab-card" data-word="belies" onclick="toggleMastered(this)">
+                        <div class="mastered-badge">✓ 외움</div>
+                        <div class="vocab-word">belies</div>
+                        <div class="vocab-meaning">~을 거짓으로 나타내다</div>
+                        <div class="vocab-example">Her calm demeanor <strong>belies</strong> the anxiety she feels inside.</div>
+                    </div>
+                    
+                    <div class="vocab-card" data-word="disparate" onclick="toggleMastered(this)">
+                        <div class="mastered-badge">✓ 외움</div>
+                        <div class="vocab-word">disparate</div>
+                        <div class="vocab-meaning">이질적인</div>
+                        <div class="vocab-example">The team brought together <strong>disparate</strong> perspectives from various fields.</div>
+                    </div>
+                    
+                    <div class="vocab-card" data-word="abrogate" onclick="toggleMastered(this)">
+                        <div class="mastered-badge">✓ 외움</div>
+                        <div class="vocab-word">abrogate</div>
+                        <div class="vocab-meaning">폐지하다</div>
+                        <div class="vocab-example">The new administration promised to <strong>abrogate</strong> the unpopular law.</div>
+                    </div>
+                    
+                    <div class="vocab-card" data-word="inimical" onclick="toggleMastered(this)">
+                        <div class="mastered-badge">✓ 외움</div>
+                        <div class="vocab-word">inimical</div>
+                        <div class="vocab-meaning">~에 해로운</div>
+                        <div class="vocab-example">Such policies are <strong>inimical</strong> to economic growth.</div>
+                    </div>
+                    
+                    <div class="vocab-card" data-word="sovereignty" onclick="toggleMastered(this)">
+                        <div class="mastered-badge">✓ 외움</div>
+                        <div class="vocab-word">sovereignty</div>
+                        <div class="vocab-meaning">주권</div>
+                        <div class="vocab-example">The nation fiercely guards its <strong>sovereignty</strong> against foreign interference.</div>
+                    </div>
+                    
+                    <div class="vocab-card" data-word="stymie" onclick="toggleMastered(this)">
+                        <div class="mastered-badge">✓ 외움</div>
+                        <div class="vocab-word">stymie</div>
+                        <div class="vocab-meaning">좌절시키다</div>
+                        <div class="vocab-example">Bureaucratic red tape continues to <strong>stymie</strong> progress on the project.</div>
+                    </div>
+                    
+                    <div class="vocab-card" data-word="foreclose" onclick="toggleMastered(this)">
+                        <div class="mastered-badge">✓ 외움</div>
+                        <div class="vocab-word">foreclose</div>
+                        <div class="vocab-meaning">차단하다</div>
+                        <div class="vocab-example">This decision will <strong>foreclose</strong> any future negotiations.</div>
+                    </div>
+                    
+                    <div class="vocab-card" data-word="obviate" onclick="toggleMastered(this)">
+                        <div class="mastered-badge">✓ 외움</div>
+                        <div class="vocab-word">obviate</div>
+                        <div class="vocab-meaning">제거하다, 방지하다</div>
+                        <div class="vocab-example">New technology may <strong>obviate</strong> the need for manual labor.</div>
+                    </div>
+                    
+                    <div class="vocab-card" data-word="disavow" onclick="toggleMastered(this)">
+                        <div class="mastered-badge">✓ 외움</div>
+                        <div class="vocab-word">disavow</div>
+                        <div class="vocab-meaning">부인하다</div>
+                        <div class="vocab-example">The politician was quick to <strong>disavow</strong> any knowledge of the scandal.</div>
+                    </div>
+                    
+                    <div class="vocab-card" data-word="tenets" onclick="toggleMastered(this)">
+                        <div class="mastered-badge">✓ 외움</div>
+                        <div class="vocab-word">tenets</div>
+                        <div class="vocab-meaning">교리, 신념</div>
+                        <div class="vocab-example">The basic <strong>tenets</strong> of democracy include freedom and equality.</div>
+                    </div>
+                    
+                    <div class="vocab-card" data-word="absurdity" onclick="toggleMastered(this)">
+                        <div class="mastered-badge">✓ 외움</div>
+                        <div class="vocab-word">absurdity</div>
+                        <div class="vocab-meaning">터무니없는 것</div>
+                        <div class="vocab-example">The <strong>absurdity</strong> of the situation became apparent to everyone.</div>
+                    </div>
+                    
+                    <div class="vocab-card" data-word="disillusionment" onclick="toggleMastered(this)">
+                        <div class="mastered-badge">✓ 외움</div>
+                        <div class="vocab-word">disillusionment</div>
+                        <div class="vocab-meaning">환멸</div>
+                        <div class="vocab-example">The scandal led to widespread <strong>disillusionment</strong> with the political system.</div>
+                    </div>
+                    
+                    <div class="vocab-card" data-word="culpability" onclick="toggleMastered(this)">
+                        <div class="mastered-badge">✓ 외움</div>
+                        <div class="vocab-word">culpability</div>
+                        <div class="vocab-meaning">과실 책임</div>
+                        <div class="vocab-example">The investigation will determine the <strong>culpability</strong> of each party involved.</div>
+                    </div>
+                    
+                    <div class="vocab-card" data-word="veracity" onclick="toggleMastered(this)">
+                        <div class="mastered-badge">✓ 외움</div>
+                        <div class="vocab-word">veracity</div>
+                        <div class="vocab-meaning">진실성</div>
+                        <div class="vocab-example">Journalists must verify the <strong>veracity</strong> of their sources.</div>
+                    </div>
+                    
+                    <div class="vocab-card" data-word="unilateral" onclick="toggleMastered(this)">
+                        <div class="mastered-badge">✓ 외움</div>
+                        <div class="vocab-word">unilateral</div>
+                        <div class="vocab-meaning">일방적인</div>
+                        <div class="vocab-example">The <strong>unilateral</strong> decision angered the other committee members.</div>
+                    </div>
+                    
+                    <div class="vocab-card" data-word="desertification" onclick="toggleMastered(this)">
+                        <div class="mastered-badge">✓ 외움</div>
+                        <div class="vocab-word">desertification</div>
+                        <div class="vocab-meaning">사막화</div>
+                        <div class="vocab-example"><strong>Desertification</strong> threatens agricultural communities worldwide.</div>
+                    </div>
+                    
+                    <div class="vocab-card" data-word="unlikely" onclick="toggleMastered(this)">
+                        <div class="mastered-badge">✓ 외움</div>
+                        <div class="vocab-word">unlikely</div>
+                        <div class="vocab-meaning">있을 것 같지 않은</div>
+                        <div class="vocab-example">It's <strong>unlikely</strong> that we'll finish the project on time.</div>
+                    </div>
+                    
+                    <div class="vocab-card" data-word="concession" onclick="toggleMastered(this)">
+                        <div class="mastered-badge">✓ 외움</div>
+                        <div class="vocab-word">concession</div>
+                        <div class="vocab-meaning">양보, 인정</div>
+                        <div class="vocab-example">The union made a major <strong>concession</strong> during negotiations.</div>
+                    </div>
+                    
+                    <div class="vocab-card" data-word="terminology" onclick="toggleMastered(this)">
+                        <div class="mastered-badge">✓ 외움</div>
+                        <div class="vocab-word">terminology</div>
+                        <div class="vocab-meaning">용어, 전문어</div>
+                        <div class="vocab-example">Medical <strong>terminology</strong> can be confusing for patients.</div>
+                    </div>
+                    
+                    <div class="vocab-card" data-word="tribunal" onclick="toggleMastered(this)">
+                        <div class="mastered-badge">✓ 외움</div>
+                        <div class="vocab-word">tribunal</div>
+                        <div class="vocab-meaning">재판소</div>
+                        <div class="vocab-example">The international <strong>tribunal</strong> will hear the war crimes case.</div>
+                    </div>
+                    
+                    <div class="vocab-card" data-word="platitude" onclick="toggleMastered(this)">
+                        <div class="mastered-badge">✓ 외움</div>
+                        <div class="vocab-word">platitude</div>
+                        <div class="vocab-meaning">진부한 말</div>
+                        <div class="vocab-example">His speech was filled with empty <strong>platitudes</strong> rather than concrete solutions.</div>
+                    </div>
+                    
+                    <div class="vocab-card" data-word="betterment" onclick="toggleMastered(this)">
+                        <div class="mastered-badge">✓ 외움</div>
+                        <div class="vocab-word">betterment</div>
+                        <div class="vocab-meaning">개선</div>
+                        <div class="vocab-example">We work for the <strong>betterment</strong> of our community.</div>
+                    </div>
+                    
+                    <div class="vocab-card" data-word="determination" onclick="toggleMastered(this)">
+                        <div class="mastered-badge">✓ 외움</div>
+                        <div class="vocab-word">determination</div>
+                        <div class="vocab-meaning">결심, 결단력</div>
+                        <div class="vocab-example">Her <strong>determination</strong> to succeed inspired everyone around her.</div>
+                    </div>
+                    
+                    <div class="vocab-card" data-word="unavailing" onclick="toggleMastered(this)">
+                        <div class="mastered-badge">✓ 외움</div>
+                        <div class="vocab-word">unavailing</div>
+                        <div class="vocab-meaning">무익한</div>
+                        <div class="vocab-example">All their efforts proved <strong>unavailing</strong> against the storm.</div>
+                    </div>
+                    
+                    <div class="vocab-card" data-word="remorse" onclick="toggleMastered(this)">
+                        <div class="mastered-badge">✓ 외움</div>
+                        <div class="vocab-word">remorse</div>
+                        <div class="vocab-meaning">후회</div>
+                        <div class="vocab-example">He showed no <strong>remorse</strong> for his actions.</div>
+                    </div>
+                    
+                    <div class="vocab-card" data-word="immune" onclick="toggleMastered(this)">
+                        <div class="mastered-badge">✓ 외움</div>
+                        <div class="vocab-word">immune</div>
+                        <div class="vocab-meaning">면역의</div>
+                        <div class="vocab-example">No one is <strong>immune</strong> to criticism.</div>
+                    </div>
+                </div>
+                
+                <div id="flashcardContainer" class="flashcard-container" style="display: none;">
+                    <div class="flashcard-progress">
+                        <span id="currentCard">1</span> / <span id="totalCards">51</span>
+                    </div>
+                    <div class="swipe-instruction">👈 모르는 단어 &nbsp;&nbsp; | &nbsp;&nbsp; 아는 단어 👉</div>
+                    <div class="flashcard-wrapper" id="flashcardWrapper">
+                        <div class="flashcard" id="flashcard" onclick="flipCard(this)">
+                            <div class="flashcard-front">
+                                <button class="speak-btn" onclick="speakWord(event, null)" title="발음 듣기">🔊</button>
+                                <div class="flashcard-word"></div>
+                            </div>
+                            <div class="flashcard-back">
+                                <div class="flashcard-meaning"></div>
+                                <div class="flashcard-example"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flashcard-controls">
+                        <button class="flashcard-btn prev" onclick="previousCard()">← 이전</button>
+                        <button class="flashcard-btn know" onclick="markAsKnown()">알고 있음 ✓</button>
+                        <button class="flashcard-btn next" onclick="nextCard()">다음 →</button>
+                        <button class="flashcard-btn reset-btn" onclick="resetProgress()">학습 초기화</button>
+                    </div>
+                    <div class="flashcard-stats">
+                        <div class="stat-item">
+                            <span class="stat-label">외운 단어:</span>
+                            <span class="stat-value" id="knownCount">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">모르는 단어:</span>
+                            <span class="stat-value" id="unknownCount">51</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="sentences" class="content">
+            <div class="section">
+                <h2>부정문 문장 복습</h2>
+                <p>다양한 부정 표현이 포함된 실전 문장들을 학습해보세요.</p>
+                
+                <div class="sentence-card">
+                    <div class="sentence-type">부정 접두사 (mal-)</div>
+                    <h3>1. Maladaptive</h3>
+                    <div class="sentence-original">
+                        In a rapidly changing environment, behavioral patterns that were once advantageous can become <span class="highlight">maladaptive</span>, actively hindering a species' chances of survival.
+                    </div>
+                    <div class="sentence-breakdown">
+                        <h4>끊어읽기</h4>
+                        <p>In a rapidly changing environment, / behavioral patterns / that were once advantageous / can become maladaptive, / actively hindering a species' chances of survival.</p>
+                    </div>
+                    <div class="sentence-translation">
+                        <h4>의역</h4>
+                        <p>급변하는 환경에서는 한때 유리했던 행동 양식이 오히려 부적응의 원인이 되어, 종의 생존 가능성을 심각하게 저해할 수 있습니다.</p>
+                    </div>
+                    <div class="sentence-explanation">
+                        <h4>부정 표현 해설</h4>
+                        <p><strong>maladaptive</strong>는 부정의 의미를 가진 접두사 mal-(bad, wrong)과 '적응하는'이라는 뜻의 adaptive가 결합된 단어입니다. 따라서 '잘못 적응하는', 즉 '부적응적인' 이라는 부정적 의미를 형성합니다.</p>
+                    </div>
+                </div>
+
+                <div class="sentence-card">
+                    <div class="sentence-type">부정의 의미를 포함하는 어휘</div>
+                    <h3>2. Eluded</h3>
+                    <div class="sentence-original">
+                        A unified theory of physics, one that seamlessly merges general relativity and quantum mechanics, has thus far <span class="highlight">eluded</span> even the most brilliant minds in the field.
+                    </div>
+                    <div class="sentence-breakdown">
+                        <h4>끊어읽기</h4>
+                        <p>A unified theory of physics, / one that seamlessly merges general relativity and quantum mechanics, / has thus far eluded / even the most brilliant minds in the field.</p>
+                    </div>
+                    <div class="sentence-translation">
+                        <h4>의역</h4>
+                        <p>일반 상대성 이론과 양자 역학을 완벽하게 통합하는 물리학의 통일 이론은, 지금까지 그 분야의 가장 뛰어난 석학들조차도 찾지 못했습니다.</p>
+                    </div>
+                    <div class="sentence-explanation">
+                        <h4>부정 표현 해설</h4>
+                        <p><strong>elude</strong>는 '교묘히 피하다', '(이해 등이) 불가능하게 하다'라는 뜻으로, "이론이 과학자들을 피해 다녔다"는 것은 논리적으로 <strong>"과학자들이 이론을 붙잡지(이해하지/찾지) 못했다"</strong>는 의미입니다.</p>
+                    </div>
+                </div>
+
+                <div class="sentence-card">
+                    <div class="sentence-type">부정의 의미를 포함하는 어휘</div>
+                    <h3>3. Undermines</h3>
+                    <div class="sentence-original">
+                        The pervasive cynicism within the electorate actively <span class="highlight">undermines</span> the potential for meaningful political dialogue and collective action.
+                    </div>
+                    <div class="sentence-breakdown">
+                        <h4>끊어읽기</h4>
+                        <p>The pervasive cynicism / within the electorate / actively undermines / the potential for meaningful political dialogue and collective action.</p>
+                    </div>
+                    <div class="sentence-translation">
+                        <h4>의역</h4>
+                        <p>유권자들 사이에 만연한 냉소주의는 의미 있는 정치적 대화와 집단행동의 가능성을 심각하게 훼손합니다.</p>
+                    </div>
+                    <div class="sentence-explanation">
+                        <h4>부정 표현 해설</h4>
+                        <p><strong>undermine</strong>은 '아래(under)를 파다(mine)'라는 어원에서 알 수 있듯, '(기반, 건강, 명성 등을) 점차적으로 약화시키다, 훼손하다'라는 부정적 의미를 가집니다.</p>
+                    </div>
+                </div>
+
+                <div class="sentence-card">
+                    <div class="sentence-type">수사적/문맥적 부정</div>
+                    <h3>4. Fell short of</h3>
+                    <div class="sentence-original">
+                        The government's response to the crisis, while well-intentioned, ultimately <span class="highlight">fell short of</span> addressing the systemic roots of the problem.
+                    </div>
+                    <div class="sentence-breakdown">
+                        <h4>끊어읽기</h4>
+                        <p>The government's response to the crisis, / while well-intentioned, / ultimately fell short of / addressing the systemic roots of the problem.</p>
+                    </div>
+                    <div class="sentence-translation">
+                        <h4>의역</h4>
+                        <p>정부의 위기 대응은 의도는 좋았을지 모르나, 궁극적으로 문제의 구조적인 근원을 해결하는 데는 미치지 못했습니다.</p>
+                    </div>
+                    <div class="sentence-explanation">
+                        <h4>부정 표현 해설</h4>
+                        <p><strong>fall short of</strong>는 '~라는 기준/목표에 미치지 못하다'라는 의미의 관용구입니다. 결과적으로 목표를 '달성하지 못했다(failed to achieve)'는 부정의 의미를 나타냅니다.</p>
+                    </div>
+                </div>
+
+                <div class="sentence-card">
+                    <div class="sentence-type">부정의 의미를 포함하는 어휘</div>
+                    <h3>5. At odds with</h3>
+                    <div class="sentence-original">
+                        The new findings are sharply <span class="highlight">at odds with</span> the long-standing consensus in the field, suggesting a paradigm shift may be imminent.
+                    </div>
+                    <div class="sentence-breakdown">
+                        <h4>끊어읽기</h4>
+                        <p>The new findings / are sharply at odds with / the long-standing consensus in the field, / suggesting a paradigm shift may be imminent.</p>
+                    </div>
+                    <div class="sentence-translation">
+                        <h4>의역</h4>
+                        <p>새로운 연구 결과는 해당 분야의 오랜 학계 정설과 크게 배치되는 것으로, 패러다임의 전환이 임박했을 가능성을 시사합니다.</p>
+                    </div>
+                    <div class="sentence-explanation">
+                        <h4>부정 표현 해설</h4>
+                        <p><strong>be at odds with</strong>는 '~와 불화하다, 의견이 다르다, 일치하지 않는다'는 의미입니다. 새로운 발견과 기존의 합의가 서로 '같지 않다(not the same)'는 강한 불일치를 나타냅니다.</p>
+                    </div>
+                </div>
+
+                <div class="sentence-card">
+                    <div class="sentence-type">부정의 의미를 포함하는 어휘</div>
+                    <h3>6. Confounded</h3>
+                    <div class="sentence-original">
+                        The quantum phenomenon of entanglement <span class="highlight">confounded</span> classical notions of causality and locality, leading Einstein to famously call it "spooky action at a distance."
+                    </div>
+                    <div class="sentence-breakdown">
+                        <h4>끊어읽기</h4>
+                        <p>The quantum phenomenon of entanglement / confounded / classical notions of causality and locality, / leading Einstein to famously call it "spooky action at a distance."</p>
+                    </div>
+                    <div class="sentence-translation">
+                        <h4>의역</h4>
+                        <p>양자 얽힘 현상은 인과율과 국소성에 대한 고전적 개념과 완전히 배치되어 아인슈타인으로 하여금 이를 "유령 같은 원격 작용"이라 부르게 만들었습니다.</p>
+                    </div>
+                    <div class="sentence-explanation">
+                        <h4>부정 표현 해설</h4>
+                        <p><strong>confound</strong>는 '완전히 틀렸음을 입증하다', '혼란에 빠뜨리다'라는 뜻입니다. 양자 얽힘 현상이 기존의 고전적 개념들을 <strong>'논리적으로 무너뜨리고 적용되지 않게 만들었다'</strong>는 강력한 부정의 의미를 담고 있습니다.</p>
+                    </div>
+                </div>
+
+                <div class="sentence-card">
+                    <div class="sentence-type">수사적/문맥적 부정 (이중 부정)</div>
+                    <h3>7. Nothing short of</h3>
+                    <div class="sentence-original">
+                        The medical team's effort to save the patient against all odds was <span class="highlight">nothing short of</span> heroic.
+                    </div>
+                    <div class="sentence-breakdown">
+                        <h4>끊어읽기</h4>
+                        <p>The medical team's effort / to save the patient against all odds / was nothing short of heroic.</p>
+                    </div>
+                    <div class="sentence-translation">
+                        <h4>의역</h4>
+                        <p>모든 역경을 무릅쓰고 환자를 살리려 한 의료팀의 노력은 그야말로 영웅적이었습니다.</p>
+                    </div>
+                    <div class="sentence-explanation">
+                        <h4>부정 표현 해설</h4>
+                        <p><strong>nothing short of</strong>는 '결코 ~에 못지않은'이라는 뜻으로, 이중 부정의 한 형태입니다. '영웅적인 것보다 부족한(short of) 것은 아무것도(nothing) 아니었다'는 말은, 논리적으로 <strong>'완벽하게 영웅적이었다'</strong>는 강한 긍정을 의미합니다.</p>
+                    </div>
+                </div>
+
+                <div class="sentence-card">
+                    <div class="sentence-type">가정법을 통한 숨은 부정</div>
+                    <h3>8. But for</h3>
+                    <div class="sentence-original">
+                        <span class="highlight">But for</span> the timely intervention of the central bank, the financial market would have collapsed entirely.
+                    </div>
+                    <div class="sentence-breakdown">
+                        <h4>끊어읽기</h4>
+                        <p>But for the timely intervention of the central bank, / the financial market / would have collapsed entirely.</p>
+                    </div>
+                    <div class="sentence-translation">
+                        <h4>의역</h4>
+                        <p>중앙은행의 시의적절한 개입이 아니었다면, 금융 시장은 완전히 붕괴했을 것입니다.</p>
+                    </div>
+                    <div class="sentence-explanation">
+                        <h4>부정 표현 해설</h4>
+                        <p><strong>But for ~</strong>는 '~이 없다면/없었다면'이라는 뜻의 가정법 구문입니다. 과거 사실의 반대를 가정하므로, <strong>'실제로는 중앙은행의 개입이 있었고, 그래서 금융 시장은 붕괴하지 않았다'</strong>는 숨은 부정의 의미를 담고 있습니다.</p>
+                    </div>
+                </div>
+
+                <div class="sentence-card">
+                    <div class="sentence-type">수사적/문맥적 부정</div>
+                    <h3>9. Far from</h3>
+                    <div class="sentence-original">
+                        When we truly examine our daily technology, we discover that, <span class="highlight">far from</span> being an ordinary thing, it is a modern wonder.
+                    </div>
+                    <div class="sentence-breakdown">
+                        <h4>끊어읽기</h4>
+                        <p>When we truly examine our daily technology, / we discover that, / far from being an ordinary thing, / it is a modern wonder.</p>
+                    </div>
+                    <div class="sentence-translation">
+                        <h4>의역</h4>
+                        <p>우리가 일상적으로 사용하는 기술을 자세히 들여다보면, 그것이 결코 평범한 것이 아니라 현대의 경이로운 산물임을 깨닫게 됩니다.</p>
+                    </div>
+                    <div class="sentence-explanation">
+                        <h4>부정 표현 해설</h4>
+                        <p><strong>far from</strong>은 '~와는 거리가 먼', 즉 '결코 ~가 아닌(not at all)' 이라는 강한 부정을 나타내는 표현입니다. '평범한 것과는 거리가 멀다'는 것은 '전혀 평범하지 않다'는 의미를 강조하는 수사적 표현입니다.</p>
+                    </div>
+                </div>
+
+                <div class="sentence-card">
+                    <div class="sentence-type">이중 부정</div>
+                    <h3>10. No less vital than</h3>
+                    <div class="sentence-original">
+                        In achieving lasting success, the role of acceptance is <span class="highlight">no less vital than</span> that of relentless determination.
+                    </div>
+                    <div class="sentence-breakdown">
+                        <h4>끊어읽기</h4>
+                        <p>In achieving lasting success, / the role of acceptance / is no less vital than / that of relentless determination.</p>
+                    </div>
+                    <div class="sentence-translation">
+                        <h4>의역</h4>
+                        <p>지속적인 성공을 이루는 데 있어, 현실을 받아들이는 자세는 끊임없이 노력하는 투지만큼이나 중요합니다.</p>
+                    </div>
+                    <div class="sentence-explanation">
+                        <h4>부정 표현 해설</h4>
+                        <p><strong>no less A than B</strong>는 이중 부정 구문으로, 'B보다 덜 A하지 않다'는 것은 곧 <strong>'B만큼이나 A하다'</strong>는 의미입니다. '투지만큼이나 수용도 똑같이 중요하다'는 동등 비교를 강조하는 표현입니다.</p>
+                    </div>
+                </div>
+
+                <div class="sentence-card">
+                    <div class="sentence-type">수사적/문맥적 부정</div>
+                    <h3>11. Little more than</h3>
+                    <div class="sentence-original">
+                        The philosopher's grand theory, upon closer inspection, amounted to <span class="highlight">little more than</span> a collection of well-worn platitudes.
+                    </div>
+                    <div class="sentence-breakdown">
+                        <h4>끊어읽기</h4>
+                        <p>The philosopher's grand theory, / upon closer inspection, / amounted to little more than / a collection of well-worn platitudes.</p>
+                    </div>
+                    <div class="sentence-translation">
+                        <h4>의역</h4>
+                        <p>그 철학자의 거창한 이론은 자세히 뜯어보니 낡고 진부한 상투어들의 모음에 불과했습니다.</p>
+                    </div>
+                    <div class="sentence-explanation">
+                        <h4>부정 표현 해설</h4>
+                        <p><strong>little more than</strong>은 '단지 ~에 지나지 않는', '~에 불과한'이라는 의미입니다. 사실상 그 이상이 아니며 '대단한 것이 아니다(nothing special)' 라고 가치를 깎아내리는 부정적 뉘앙스를 전달합니다.</p>
+                    </div>
+                </div>
+
+                <div class="sentence-card">
+                    <div class="sentence-type">이중 부정</div>
+                    <h3>12. No less damning than</h3>
+                    <div class="sentence-original">
+                        The executive's silence on the fraud allegations was considered <span class="highlight">no less damning than</span> an open admission of guilt.
+                    </div>
+                    <div class="sentence-breakdown">
+                        <h4>끊어읽기</h4>
+                        <p>The executive's silence on the fraud allegations / was considered / no less damning than / an open admission of guilt.</p>
+                    </div>
+                    <div class="sentence-translation">
+                        <h4>의역</h4>
+                        <p>사기 혐의에 대한 그 임원의 침묵은 공개적으로 죄를 시인하는 것 못지않게 비난받아 마땅한 일로 여겨졌습니다.</p>
+                    </div>
+                    <div class="sentence-explanation">
+                        <h4>부정 표현 해설</h4>
+                        <p><strong>no less A than B</strong>는 'B만큼이나 A하다'는 뜻입니다. 침묵과 자백의 부정적 효과가 <strong>'동일하게 강력하다'</strong>고 강조하는 표현입니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // 로컬 스토리지에서 외운 단어 불러오기
+        let masteredWords = JSON.parse(localStorage.getItem('masteredWords')) || [];
+        let currentCardIndex = 0;
+        let isAnimating = false;
+        let unknownWords = [];
+        
+        let wordData = [
+            { word: 'causal', meaning: '인과적인', example: 'There is a <strong>causal</strong> relationship between smoking and lung cancer.' },
+            { word: 'variable', meaning: '변수들', example: 'We need to consider all the <strong>variables</strong> in this experiment.' },
+            { word: 'defendant', meaning: '피고인', example: 'The <strong>defendant</strong> pleaded not guilty to all charges.' },
+            { word: 'charge', meaning: '혐의들', example: 'He faces multiple <strong>charges</strong> including fraud and embezzlement.' },
+            { word: 'citing', meaning: '인용하는', example: 'The professor emphasized the importance of <strong>citing</strong> sources properly.' },
+            { word: 'impractical', meaning: '비현실적인', example: 'Your suggestion is <strong>impractical</strong> given our limited budget.' },
+            { word: 'asymmetrical', meaning: '비대칭적인', example: 'The building has an interesting <strong>asymmetrical</strong> design.' },
+            { word: 'rhetoric', meaning: '수사학, 미사여구', example: 'His speech was full of empty <strong>rhetoric</strong> with no substance.' },
+            { word: 'esoteric', meaning: '소수만 이해하는', example: 'The professor\'s lecture on quantum physics was too <strong>esoteric</strong> for most students.' },
+            { word: 'allusion', meaning: '암시, 간접적인 언급', example: 'The poem contains an <strong>allusion</strong> to Greek mythology.' },
+            { word: 'baffle', meaning: '당황하게 하다', example: 'The magician\'s tricks completely <strong>baffled</strong> the audience.' },
+            { word: 'disenfranchise', meaning: '선거권을 박탈당한', example: 'Many citizens were <strong>disenfranchised</strong> due to unfair voting laws.' },
+            { word: 'compromise', meaning: '타협', example: 'Both parties reached a <strong>compromise</strong> after lengthy negotiations.' },
+            { word: 'immoral', meaning: '부도덕한', example: 'The company\'s <strong>immoral</strong> business practices were exposed by journalists.' },
+            { word: 'amoral', meaning: '도덕 개념이 없는', example: 'The artificial intelligence system is <strong>amoral</strong>, lacking any sense of right or wrong.' },
+            { word: 'fungible', meaning: '대체 가능한', example: 'Money is <strong>fungible</strong> because one dollar bill can replace another.' },
+            { word: 'untenable', meaning: '지지할 수 없는', example: 'His position became <strong>untenable</strong> after the scandal was revealed.' },
+            { word: 'precludes', meaning: '~을 막다, 배제하다', example: 'The contract <strong>precludes</strong> any possibility of early termination.' },
+            { word: 'quantum', meaning: '양자, 상당한 양', example: '<strong>Quantum</strong> mechanics revolutionized our understanding of physics.' },
+            { word: 'repudiate', meaning: '거부하다', example: 'The government decided to <strong>repudiate</strong> the controversial agreement.' },
+            { word: 'deterministic', meaning: '결정론적인', example: 'The universe may not be as <strong>deterministic</strong> as classical physics suggested.' },
+            { word: 'cynicism', meaning: '냉소주의', example: 'Years of broken promises led to widespread <strong>cynicism</strong> among voters.' },
+            { word: 'electorate', meaning: '유권자 전체', example: 'The <strong>electorate</strong> showed their dissatisfaction in the recent election.' },
+            { word: 'imminent', meaning: '임박한', example: 'Scientists warned that climate disaster is <strong>imminent</strong> without immediate action.' },
+            { word: 'belies', meaning: '~을 거짓으로 나타내다', example: 'Her calm demeanor <strong>belies</strong> the anxiety she feels inside.' },
+            { word: 'disparate', meaning: '이질적인', example: 'The team brought together <strong>disparate</strong> perspectives from various fields.' },
+            { word: 'abrogate', meaning: '폐지하다', example: 'The new administration promised to <strong>abrogate</strong> the unpopular law.' },
+            { word: 'inimical', meaning: '~에 해로운', example: 'Such policies are <strong>inimical</strong> to economic growth.' },
+            { word: 'sovereignty', meaning: '주권', example: 'The nation fiercely guards its <strong>sovereignty</strong> against foreign interference.' },
+            { word: 'stymie', meaning: '좌절시키다', example: 'Bureaucratic red tape continues to <strong>stymie</strong> progress on the project.' },
+            { word: 'foreclose', meaning: '차단하다', example: 'This decision will <strong>foreclose</strong> any future negotiations.' },
+            { word: 'obviate', meaning: '제거하다, 방지하다', example: 'New technology may <strong>obviate</strong> the need for manual labor.' },
+            { word: 'disavow', meaning: '부인하다', example: 'The politician was quick to <strong>disavow</strong> any knowledge of the scandal.' },
+            { word: 'tenets', meaning: '교리, 신념', example: 'The basic <strong>tenets</strong> of democracy include freedom and equality.' },
+            { word: 'absurdity', meaning: '터무니없는 것', example: 'The <strong>absurdity</strong> of the situation became apparent to everyone.' },
+            { word: 'disillusionment', meaning: '환멸', example: 'The scandal led to widespread <strong>disillusionment</strong> with the political system.' },
+            { word: 'culpability', meaning: '과실 책임', example: 'The investigation will determine the <strong>culpability</strong> of each party involved.' },
+            { word: 'veracity', meaning: '진실성', example: 'Journalists must verify the <strong>veracity</strong> of their sources.' },
+            { word: 'unilateral', meaning: '일방적인', example: 'The <strong>unilateral</strong> decision angered the other committee members.' },
+            { word: 'desertification', meaning: '사막화', example: '<strong>Desertification</strong> threatens agricultural communities worldwide.' },
+            { word: 'unlikely', meaning: '있을 것 같지 않은', example: 'It\'s <strong>unlikely</strong> that we\'ll finish the project on time.' },
+            { word: 'concession', meaning: '양보, 인정', example: 'The union made a major <strong>concession</strong> during negotiations.' },
+            { word: 'terminology', meaning: '용어, 전문어', example: 'Medical <strong>terminology</strong> can be confusing for patients.' },
+            { word: 'tribunal', meaning: '재판소', example: 'The international <strong>tribunal</strong> will hear the war crimes case.' },
+            { word: 'platitude', meaning: '진부한 말', example: 'His speech was filled with empty <strong>platitudes</strong> rather than concrete solutions.' },
+            { word: 'betterment', meaning: '개선', example: 'We work for the <strong>betterment</strong> of our community.' },
+            { word: 'determination', meaning: '결심, 결단력', example: 'Her <strong>determination</strong> to succeed inspired everyone around her.' },
+            { word: 'unavailing', meaning: '무익한', example: 'All their efforts proved <strong>unavailing</strong> against the storm.' },
+            { word: 'remorse', meaning: '후회', example: 'He showed no <strong>remorse</strong> for his actions.' },
+            { word: 'immune', meaning: '면역의', example: 'No one is <strong>immune</strong> to criticism.' }
+        ];
+        
+        // 페이지 로드 시 외운 단어 표시
+        window.onload = function() {
+            updateMasteredWords();
+            initSwipeGestures();
+            updateUnknownWords();
+        };
+        
+        function updateMasteredWords() {
+            const cards = document.querySelectorAll('.vocab-card');
+            cards.forEach(card => {
+                const word = card.getAttribute('data-word');
+                if (masteredWords.includes(word)) {
+                    card.classList.add('mastered');
+                } else {
+                    card.classList.remove('mastered');
+                }
+            });
+            updateStats();
+        }
+        
+        function updateUnknownWords() {
+            unknownWords = wordData.filter(word => !masteredWords.includes(word.word));
+        }
+        
+        function toggleMastered(card) {
+            const word = card.getAttribute('data-word');
+            if (masteredWords.includes(word)) {
+                // 이미 외운 단어면 제거
+                masteredWords = masteredWords.filter(w => w !== word);
+                card.classList.remove('mastered');
+            } else {
+                // 외운 단어 추가
+                masteredWords.push(word);
+                card.classList.add('mastered');
+            }
+            // 로컬 스토리지에 저장
+            localStorage.setItem('masteredWords', JSON.stringify(masteredWords));
+            updateStats();
+            updateUnknownWords();
+        }
+        
+        function resetProgress() {
+            if (confirm('정말로 학습 진도를 초기화하시겠습니까?')) {
+                masteredWords = [];
+                localStorage.setItem('masteredWords', JSON.stringify([]));
+                document.querySelectorAll('.vocab-card').forEach(card => {
+                    card.classList.remove('mastered');
+                });
+                updateStats();
+                updateUnknownWords();
+                currentCardIndex = 0;
+                showCard(currentCardIndex);
+            }
+        }
+        
+        function speakWord(event, word) {
+            event.stopPropagation(); // 카드 클릭 이벤트 방지
+            
+            // 플래시카드에서 호출된 경우 현재 단어 가져오기
+            if (!word) {
+                if (unknownWords.length > 0) {
+                    word = unknownWords[currentCardIndex].word;
+                } else {
+                    word = wordData[currentCardIndex].word;
+                }
+            }
+            
+            if ('speechSynthesis' in window) {
+                // 이전 음성 중지
+                window.speechSynthesis.cancel();
+                
+                const utterance = new SpeechSynthesisUtterance(word);
+                utterance.lang = 'en-US'; // 미국식 영어 발음
+                utterance.rate = 0.8; // 속도 조절
+                utterance.pitch = 1; // 음높이
+                utterance.volume = 1; // 음량
+                
+                // 음성 선택 (있는 경우)
+                const voices = window.speechSynthesis.getVoices();
+                const englishVoice = voices.find(voice => voice.lang.includes('en'));
+                if (englishVoice) {
+                    utterance.voice = englishVoice;
+                }
+                
+                window.speechSynthesis.speak(utterance);
+            } else {
+                alert('죄송합니다. 이 브라우저는 음성 기능을 지원하지 않습니다.');
+            }
+        }
+        
+        function showTab(tabName) {
+            // 모든 탭과 콘텐츠 숨기기
+            const tabs = document.querySelectorAll('.tab');
+            const contents = document.querySelectorAll('.content');
+            
+            tabs.forEach(tab => tab.classList.remove('active'));
+            contents.forEach(content => content.classList.remove('active'));
+            
+            // 선택된 탭 활성화
+            const clickedTab = event.target;
+            clickedTab.classList.add('active');
+            
+            // 해당 콘텐츠 표시
+            document.getElementById(tabName).classList.add('active');
+        }
+        
+        function showAllWords() {
+            document.getElementById('wordList').style.display = 'grid';
+            document.getElementById('flashcardContainer').style.display = 'none';
+        }
+        
+        function showFlashcards() {
+            document.getElementById('wordList').style.display = 'none';
+            document.getElementById('flashcardContainer').style.display = 'block';
+            currentCardIndex = 0;
+            updateUnknownWords();
+            
+            if (unknownWords.length === 0) {
+                alert('모든 단어를 외웠습니다! 처음부터 다시 시작합니다.');
+                unknownWords = [...wordData];
+            }
+            showCard(currentCardIndex);
+            updateStats();
+        }
+        
+        function openQuizlet() {
+            window.open('https://quizlet.com/kr/1063542062/%EB%B6%80%EC%A0%95%EB%AC%B8-%EB%8B%A8%EC%96%B4-flash-cards/?i=4ai1m4&x=1qqt', '_blank');
+        }
+        
+        function showCard(index) {
+            const flashcard = document.querySelector('.flashcard');
+            flashcard.classList.remove('flipped');
+            
+            setTimeout(() => {
+                let word;
+                if (unknownWords.length > 0) {
+                    word = unknownWords[index];
+                    document.getElementById('currentCard').textContent = index + 1;
+                    document.getElementById('totalCards').textContent = unknownWords.length;
+                } else {
+                    word = wordData[index];
+                    document.getElementById('currentCard').textContent = index + 1;
+                    document.getElementById('totalCards').textContent = wordData.length;
+                }
+                
+                document.querySelector('.flashcard-word').textContent = word.word;
+                document.querySelector('.flashcard-meaning').textContent = word.meaning;
+                document.querySelector('.flashcard-example').innerHTML = word.example;
+            }, 300);
+        }
+        
+        function flipCard(card) {
+            card.classList.toggle('flipped');
+        }
+        
+        function nextCard() {
+            const totalCards = unknownWords.length > 0 ? unknownWords.length : wordData.length;
+            
+            if (currentCardIndex < totalCards - 1) {
+                currentCardIndex++;
+            } else {
+                currentCardIndex = 0;
+            }
+            showCard(currentCardIndex);
+        }
+        
+        function previousCard() {
+            const totalCards = unknownWords.length > 0 ? unknownWords.length : wordData.length;
+            
+            if (currentCardIndex > 0) {
+                currentCardIndex--;
+            } else {
+                currentCardIndex = totalCards - 1;
+            }
+            showCard(currentCardIndex);
+        }
+        
+        function markAsKnown() {
+            let currentWord;
+            if (unknownWords.length > 0) {
+                currentWord = unknownWords[currentCardIndex].word;
+                
+                if (!masteredWords.includes(currentWord)) {
+                    masteredWords.push(currentWord);
+                    localStorage.setItem('masteredWords', JSON.stringify(masteredWords));
+                    
+                    // 단어 목록에서도 업데이트
+                    const card = document.querySelector(`[data-word="${currentWord}"]`);
+                    if (card) {
+                        card.classList.add('mastered');
+                    }
+                    
+                    // 모르는 단어 목록에서 제거
+                    unknownWords = unknownWords.filter(w => w.word !== currentWord);
+                    
+                    if (unknownWords.length === 0) {
+                        updateStats();
+                        alert('모든 단어를 외웠습니다! 축하합니다! 🎉');
+                        unknownWords = [...wordData];
+                        currentCardIndex = 0;
+                        showCard(currentCardIndex);
+                    } else {
+                        // 현재 인덱스가 범위를 벗어나면 조정
+                        if (currentCardIndex >= unknownWords.length) {
+                            currentCardIndex = unknownWords.length - 1;
+                        }
+                        updateStats();
+                        showCard(currentCardIndex);
+                    }
+                }
+            } else {
+                nextCard();
+            }
+        }
+        
+        function updateStats() {
+            const knownElement = document.getElementById('knownCount');
+            const unknownElement = document.getElementById('unknownCount');
+            if (knownElement) knownElement.textContent = masteredWords.length;
+            if (unknownElement) unknownElement.textContent = wordData.length - masteredWords.length;
+        }
+        
+        // 스와이프 기능 추가
+        function initSwipeGestures() {
+            const flashcard = document.getElementById('flashcard');
+            if (!flashcard) return;
+            
+            // 마우스 이벤트
+            let isDragging = false;
+            let startX = 0;
+            let currentX = 0;
+            
+            flashcard.addEventListener('mousedown', handleStart);
+            flashcard.addEventListener('mousemove', handleMove);
+            flashcard.addEventListener('mouseup', handleEnd);
+            flashcard.addEventListener('mouseleave', handleEnd);
+            
+            // 터치 이벤트
+            flashcard.addEventListener('touchstart', handleStart, {passive: false});
+            flashcard.addEventListener('touchmove', handleMove, {passive: false});
+            flashcard.addEventListener('touchend', handleEnd);
+            
+            function handleStart(e) {
+                if (isAnimating) return;
+                isDragging = true;
+                startX = e.type.includes('mouse') ? e.clientX : e.touches[0].clientX;
+                flashcard.style.transition = 'none';
+            }
+            
+            function handleMove(e) {
+                if (!isDragging || isAnimating) return;
+                e.preventDefault();
+                currentX = e.type.includes('mouse') ? e.clientX : e.touches[0].clientX;
+                const deltaX = currentX - startX;
+                const rotation = deltaX * 0.1;
+                
+                flashcard.style.transform = `translateX(${deltaX}px) rotate(${rotation}deg)`;
+                flashcard.style.opacity = 1 - Math.abs(deltaX) / 300;
+            }
+            
+            function handleEnd(e) {
+                if (!isDragging || isAnimating) return;
+                isDragging = false;
+                
+                const deltaX = currentX - startX;
+                const threshold = 100;
+                
+                flashcard.style.transition = 'all 0.3s ease-out';
+                
+                if (Math.abs(deltaX) > threshold) {
+                    isAnimating = true;
+                    
+                    if (deltaX > 0) {
+                        // 오른쪽으로 스와이프 - 아는 단어
+                        flashcard.classList.add('swipe-right');
+                        setTimeout(() => {
+                            markAsKnown();
+                            flashcard.classList.remove('swipe-right');
+                            flashcard.style.transform = '';
+                            flashcard.style.opacity = '';
+                            isAnimating = false;
+                        }, 300);
+                    } else {
+                        // 왼쪽으로 스와이프 - 모르는 단어
+                        flashcard.classList.add('swipe-left');
+                        setTimeout(() => {
+                            nextCard();
+                            flashcard.classList.remove('swipe-left');
+                            flashcard.style.transform = '';
+                            flashcard.style.opacity = '';
+                            isAnimating = false;
+                        }, 300);
+                    }
+                } else {
+                    // 임계값 미달 - 원위치
+                    flashcard.style.transform = '';
+                    flashcard.style.opacity = '';
+                }
+                
+                currentX = 0;
+            }
+        }
+        
+        // 브라우저가 음성 목록을 로드할 때까지 대기
+        if ('speechSynthesis' in window) {
+            window.speechSynthesis.onvoiceschanged = function() {
+                // 음성 목록이 로드됨
+            };
+        }
+    </script>
+</body>
+</html>
