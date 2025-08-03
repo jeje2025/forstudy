@@ -309,18 +309,6 @@
             transform: translateY(0);
         }
         
-        .quizlet-btn {
-            background: linear-gradient(135deg, #4255ff, #5468ff);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-        }
-        
-        .quizlet-btn:hover {
-            background: linear-gradient(135deg, #3648e5, #4559e5);
-        }
-        
         /* 플래시카드 스타일 */
         .flashcard-container {
             max-width: 500px;
@@ -950,12 +938,6 @@
                 <div class="study-controls">
                     <button class="control-btn" onclick="showAllWords()">전체 단어 보기</button>
                     <button class="control-btn" onclick="showFlashcards()">플래시카드 학습</button>
-                    <button class="control-btn quizlet-btn" onclick="openQuizlet()">
-                        <span>퀴즐렛에서 학습하기</span>
-                        <svg style="width: 20px; height: 20px; margin-left: 5px; vertical-align: middle;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M10 6H6C4.89543 6 4 6.89543 4 8V18C4 19.1046 4.89543 20 6 20H16C17.1046 20 18 19.1046 18 18V14M14 4H20M20 4V10M20 4L10 14" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
                 </div>
                 
                 <div id="wordList" class="vocab-container">
@@ -1042,277 +1024,11 @@
                         <div class="vocab-meaning">선거권을 박탈당한</div>
                         <div class="vocab-example">Many citizens were <strong>disenfranchised</strong> due to unfair voting laws.</div>
                     </div>
-                    
-                    <div class="vocab-card" data-word="compromise" onclick="toggleMastered(this)">
-                        <div class="mastered-badge">✓ 외움</div>
-                        <div class="vocab-word">compromise</div>
-                        <div class="vocab-meaning">타협</div>
-                        <div class="vocab-example">Both parties reached a <strong>compromise</strong> after lengthy negotiations.</div>
-                    </div>
-                    
-                    <div class="vocab-card" data-word="immoral" onclick="toggleMastered(this)">
-                        <div class="mastered-badge">✓ 외움</div>
-                        <div class="vocab-word">immoral</div>
-                        <div class="vocab-meaning">부도덕한</div>
-                        <div class="vocab-example">The company's <strong>immoral</strong> business practices were exposed by journalists.</div>
-                    </div>
-                    
-                    <div class="vocab-card" data-word="amoral" onclick="toggleMastered(this)">
-                        <div class="mastered-badge">✓ 외움</div>
-                        <div class="vocab-word">amoral</div>
-                        <div class="vocab-meaning">도덕 개념이 없는</div>
-                        <div class="vocab-example">The artificial intelligence system is <strong>amoral</strong>, lacking any sense of right or wrong.</div>
-                    </div>
-                    
-                    <div class="vocab-card" data-word="fungible" onclick="toggleMastered(this)">
-                        <div class="mastered-badge">✓ 외움</div>
-                        <div class="vocab-word">fungible</div>
-                        <div class="vocab-meaning">대체 가능한</div>
-                        <div class="vocab-example">Money is <strong>fungible</strong> because one dollar bill can replace another.</div>
-                    </div>
-                    
-                    <div class="vocab-card" data-word="untenable" onclick="toggleMastered(this)">
-                        <div class="mastered-badge">✓ 외움</div>
-                        <div class="vocab-word">untenable</div>
-                        <div class="vocab-meaning">지지할 수 없는</div>
-                        <div class="vocab-example">His position became <strong>untenable</strong> after the scandal was revealed.</div>
-                    </div>
-                    
-                    <div class="vocab-card" data-word="precludes" onclick="toggleMastered(this)">
-                        <div class="mastered-badge">✓ 외움</div>
-                        <div class="vocab-word">precludes</div>
-                        <div class="vocab-meaning">~을 막다, 배제하다</div>
-                        <div class="vocab-example">The contract <strong>precludes</strong> any possibility of early termination.</div>
-                    </div>
-                    
-                    <div class="vocab-card" data-word="quantum" onclick="toggleMastered(this)">
-                        <div class="mastered-badge">✓ 외움</div>
-                        <div class="vocab-word">quantum</div>
-                        <div class="vocab-meaning">양자, 상당한 양</div>
-                        <div class="vocab-example"><strong>Quantum</strong> mechanics revolutionized our understanding of physics.</div>
-                    </div>
-                    
-                    <div class="vocab-card" data-word="repudiate" onclick="toggleMastered(this)">
-                        <div class="mastered-badge">✓ 외움</div>
-                        <div class="vocab-word">repudiate</div>
-                        <div class="vocab-meaning">거부하다</div>
-                        <div class="vocab-example">The government decided to <strong>repudiate</strong> the controversial agreement.</div>
-                    </div>
-                    
-                    <div class="vocab-card" data-word="deterministic" onclick="toggleMastered(this)">
-                        <div class="mastered-badge">✓ 외움</div>
-                        <div class="vocab-word">deterministic</div>
-                        <div class="vocab-meaning">결정론적인</div>
-                        <div class="vocab-example">The universe may not be as <strong>deterministic</strong> as classical physics suggested.</div>
-                    </div>
-                    
-                    <div class="vocab-card" data-word="cynicism" onclick="toggleMastered(this)">
-                        <div class="mastered-badge">✓ 외움</div>
-                        <div class="vocab-word">cynicism</div>
-                        <div class="vocab-meaning">냉소주의</div>
-                        <div class="vocab-example">Years of broken promises led to widespread <strong>cynicism</strong> among voters.</div>
-                    </div>
-                    
-                    <div class="vocab-card" data-word="electorate" onclick="toggleMastered(this)">
-                        <div class="mastered-badge">✓ 외움</div>
-                        <div class="vocab-word">electorate</div>
-                        <div class="vocab-meaning">유권자 전체</div>
-                        <div class="vocab-example">The <strong>electorate</strong> showed their dissatisfaction in the recent election.</div>
-                    </div>
-                    
-                    <div class="vocab-card" data-word="imminent" onclick="toggleMastered(this)">
-                        <div class="mastered-badge">✓ 외움</div>
-                        <div class="vocab-word">imminent</div>
-                        <div class="vocab-meaning">임박한</div>
-                        <div class="vocab-example">Scientists warned that climate disaster is <strong>imminent</strong> without immediate action.</div>
-                    </div>
-                    
-                    <div class="vocab-card" data-word="belies" onclick="toggleMastered(this)">
-                        <div class="mastered-badge">✓ 외움</div>
-                        <div class="vocab-word">belies</div>
-                        <div class="vocab-meaning">~을 거짓으로 나타내다</div>
-                        <div class="vocab-example">Her calm demeanor <strong>belies</strong> the anxiety she feels inside.</div>
-                    </div>
-                    
-                    <div class="vocab-card" data-word="disparate" onclick="toggleMastered(this)">
-                        <div class="mastered-badge">✓ 외움</div>
-                        <div class="vocab-word">disparate</div>
-                        <div class="vocab-meaning">이질적인</div>
-                        <div class="vocab-example">The team brought together <strong>disparate</strong> perspectives from various fields.</div>
-                    </div>
-                    
-                    <div class="vocab-card" data-word="abrogate" onclick="toggleMastered(this)">
-                        <div class="mastered-badge">✓ 외움</div>
-                        <div class="vocab-word">abrogate</div>
-                        <div class="vocab-meaning">폐지하다</div>
-                        <div class="vocab-example">The new administration promised to <strong>abrogate</strong> the unpopular law.</div>
-                    </div>
-                    
-                    <div class="vocab-card" data-word="inimical" onclick="toggleMastered(this)">
-                        <div class="mastered-badge">✓ 외움</div>
-                        <div class="vocab-word">inimical</div>
-                        <div class="vocab-meaning">~에 해로운</div>
-                        <div class="vocab-example">Such policies are <strong>inimical</strong> to economic growth.</div>
-                    </div>
-                    
-                    <div class="vocab-card" data-word="sovereignty" onclick="toggleMastered(this)">
-                        <div class="mastered-badge">✓ 외움</div>
-                        <div class="vocab-word">sovereignty</div>
-                        <div class="vocab-meaning">주권</div>
-                        <div class="vocab-example">The nation fiercely guards its <strong>sovereignty</strong> against foreign interference.</div>
-                    </div>
-                    
-                    <div class="vocab-card" data-word="stymie" onclick="toggleMastered(this)">
-                        <div class="mastered-badge">✓ 외움</div>
-                        <div class="vocab-word">stymie</div>
-                        <div class="vocab-meaning">좌절시키다</div>
-                        <div class="vocab-example">Bureaucratic red tape continues to <strong>stymie</strong> progress on the project.</div>
-                    </div>
-                    
-                    <div class="vocab-card" data-word="foreclose" onclick="toggleMastered(this)">
-                        <div class="mastered-badge">✓ 외움</div>
-                        <div class="vocab-word">foreclose</div>
-                        <div class="vocab-meaning">차단하다</div>
-                        <div class="vocab-example">This decision will <strong>foreclose</strong> any future negotiations.</div>
-                    </div>
-                    
-                    <div class="vocab-card" data-word="obviate" onclick="toggleMastered(this)">
-                        <div class="mastered-badge">✓ 외움</div>
-                        <div class="vocab-word">obviate</div>
-                        <div class="vocab-meaning">제거하다, 방지하다</div>
-                        <div class="vocab-example">New technology may <strong>obviate</strong> the need for manual labor.</div>
-                    </div>
-                    
-                    <div class="vocab-card" data-word="disavow" onclick="toggleMastered(this)">
-                        <div class="mastered-badge">✓ 외움</div>
-                        <div class="vocab-word">disavow</div>
-                        <div class="vocab-meaning">부인하다</div>
-                        <div class="vocab-example">The politician was quick to <strong>disavow</strong> any knowledge of the scandal.</div>
-                    </div>
-                    
-                    <div class="vocab-card" data-word="tenets" onclick="toggleMastered(this)">
-                        <div class="mastered-badge">✓ 외움</div>
-                        <div class="vocab-word">tenets</div>
-                        <div class="vocab-meaning">교리, 신념</div>
-                        <div class="vocab-example">The basic <strong>tenets</strong> of democracy include freedom and equality.</div>
-                    </div>
-                    
-                    <div class="vocab-card" data-word="absurdity" onclick="toggleMastered(this)">
-                        <div class="mastered-badge">✓ 외움</div>
-                        <div class="vocab-word">absurdity</div>
-                        <div class="vocab-meaning">터무니없는 것</div>
-                        <div class="vocab-example">The <strong>absurdity</strong> of the situation became apparent to everyone.</div>
-                    </div>
-                    
-                    <div class="vocab-card" data-word="disillusionment" onclick="toggleMastered(this)">
-                        <div class="mastered-badge">✓ 외움</div>
-                        <div class="vocab-word">disillusionment</div>
-                        <div class="vocab-meaning">환멸</div>
-                        <div class="vocab-example">The scandal led to widespread <strong>disillusionment</strong> with the political system.</div>
-                    </div>
-                    
-                    <div class="vocab-card" data-word="culpability" onclick="toggleMastered(this)">
-                        <div class="mastered-badge">✓ 외움</div>
-                        <div class="vocab-word">culpability</div>
-                        <div class="vocab-meaning">과실 책임</div>
-                        <div class="vocab-example">The investigation will determine the <strong>culpability</strong> of each party involved.</div>
-                    </div>
-                    
-                    <div class="vocab-card" data-word="veracity" onclick="toggleMastered(this)">
-                        <div class="mastered-badge">✓ 외움</div>
-                        <div class="vocab-word">veracity</div>
-                        <div class="vocab-meaning">진실성</div>
-                        <div class="vocab-example">Journalists must verify the <strong>veracity</strong> of their sources.</div>
-                    </div>
-                    
-                    <div class="vocab-card" data-word="unilateral" onclick="toggleMastered(this)">
-                        <div class="mastered-badge">✓ 외움</div>
-                        <div class="vocab-word">unilateral</div>
-                        <div class="vocab-meaning">일방적인</div>
-                        <div class="vocab-example">The <strong>unilateral</strong> decision angered the other committee members.</div>
-                    </div>
-                    
-                    <div class="vocab-card" data-word="desertification" onclick="toggleMastered(this)">
-                        <div class="mastered-badge">✓ 외움</div>
-                        <div class="vocab-word">desertification</div>
-                        <div class="vocab-meaning">사막화</div>
-                        <div class="vocab-example"><strong>Desertification</strong> threatens agricultural communities worldwide.</div>
-                    </div>
-                    
-                    <div class="vocab-card" data-word="unlikely" onclick="toggleMastered(this)">
-                        <div class="mastered-badge">✓ 외움</div>
-                        <div class="vocab-word">unlikely</div>
-                        <div class="vocab-meaning">있을 것 같지 않은</div>
-                        <div class="vocab-example">It's <strong>unlikely</strong> that we'll finish the project on time.</div>
-                    </div>
-                    
-                    <div class="vocab-card" data-word="concession" onclick="toggleMastered(this)">
-                        <div class="mastered-badge">✓ 외움</div>
-                        <div class="vocab-word">concession</div>
-                        <div class="vocab-meaning">양보, 인정</div>
-                        <div class="vocab-example">The union made a major <strong>concession</strong> during negotiations.</div>
-                    </div>
-                    
-                    <div class="vocab-card" data-word="terminology" onclick="toggleMastered(this)">
-                        <div class="mastered-badge">✓ 외움</div>
-                        <div class="vocab-word">terminology</div>
-                        <div class="vocab-meaning">용어, 전문어</div>
-                        <div class="vocab-example">Medical <strong>terminology</strong> can be confusing for patients.</div>
-                    </div>
-                    
-                    <div class="vocab-card" data-word="tribunal" onclick="toggleMastered(this)">
-                        <div class="mastered-badge">✓ 외움</div>
-                        <div class="vocab-word">tribunal</div>
-                        <div class="vocab-meaning">재판소</div>
-                        <div class="vocab-example">The international <strong>tribunal</strong> will hear the war crimes case.</div>
-                    </div>
-                    
-                    <div class="vocab-card" data-word="platitude" onclick="toggleMastered(this)">
-                        <div class="mastered-badge">✓ 외움</div>
-                        <div class="vocab-word">platitude</div>
-                        <div class="vocab-meaning">진부한 말</div>
-                        <div class="vocab-example">His speech was filled with empty <strong>platitudes</strong> rather than concrete solutions.</div>
-                    </div>
-                    
-                    <div class="vocab-card" data-word="betterment" onclick="toggleMastered(this)">
-                        <div class="mastered-badge">✓ 외움</div>
-                        <div class="vocab-word">betterment</div>
-                        <div class="vocab-meaning">개선</div>
-                        <div class="vocab-example">We work for the <strong>betterment</strong> of our community.</div>
-                    </div>
-                    
-                    <div class="vocab-card" data-word="determination" onclick="toggleMastered(this)">
-                        <div class="mastered-badge">✓ 외움</div>
-                        <div class="vocab-word">determination</div>
-                        <div class="vocab-meaning">결심, 결단력</div>
-                        <div class="vocab-example">Her <strong>determination</strong> to succeed inspired everyone around her.</div>
-                    </div>
-                    
-                    <div class="vocab-card" data-word="unavailing" onclick="toggleMastered(this)">
-                        <div class="mastered-badge">✓ 외움</div>
-                        <div class="vocab-word">unavailing</div>
-                        <div class="vocab-meaning">무익한</div>
-                        <div class="vocab-example">All their efforts proved <strong>unavailing</strong> against the storm.</div>
-                    </div>
-                    
-                    <div class="vocab-card" data-word="remorse" onclick="toggleMastered(this)">
-                        <div class="mastered-badge">✓ 외움</div>
-                        <div class="vocab-word">remorse</div>
-                        <div class="vocab-meaning">후회</div>
-                        <div class="vocab-example">He showed no <strong>remorse</strong> for his actions.</div>
-                    </div>
-                    
-                    <div class="vocab-card" data-word="immune" onclick="toggleMastered(this)">
-                        <div class="mastered-badge">✓ 외움</div>
-                        <div class="vocab-word">immune</div>
-                        <div class="vocab-meaning">면역의</div>
-                        <div class="vocab-example">No one is <strong>immune</strong> to criticism.</div>
-                    </div>
                 </div>
                 
                 <div id="flashcardContainer" class="flashcard-container" style="display: none;">
                     <div class="flashcard-progress">
-                        <span id="currentCard">1</span> / <span id="totalCards">51</span>
+                        <span id="currentCard">1</span> / <span id="totalCards">12</span>
                     </div>
                     <div class="swipe-instruction">👈 모르는 단어 &nbsp;&nbsp; | &nbsp;&nbsp; 아는 단어 👉</div>
                     <div class="flashcard-wrapper" id="flashcardWrapper">
@@ -1340,7 +1056,7 @@
                         </div>
                         <div class="stat-item">
                             <span class="stat-label">모르는 단어:</span>
-                            <span class="stat-value" id="unknownCount">51</span>
+                            <span class="stat-value" id="unknownCount">12</span>
                         </div>
                     </div>
                 </div>
@@ -1614,45 +1330,7 @@
             { word: 'esoteric', meaning: '소수만 이해하는', example: 'The professor\'s lecture on quantum physics was too <strong>esoteric</strong> for most students.' },
             { word: 'allusion', meaning: '암시, 간접적인 언급', example: 'The poem contains an <strong>allusion</strong> to Greek mythology.' },
             { word: 'baffle', meaning: '당황하게 하다', example: 'The magician\'s tricks completely <strong>baffled</strong> the audience.' },
-            { word: 'disenfranchise', meaning: '선거권을 박탈당한', example: 'Many citizens were <strong>disenfranchised</strong> due to unfair voting laws.' },
-            { word: 'compromise', meaning: '타협', example: 'Both parties reached a <strong>compromise</strong> after lengthy negotiations.' },
-            { word: 'immoral', meaning: '부도덕한', example: 'The company\'s <strong>immoral</strong> business practices were exposed by journalists.' },
-            { word: 'amoral', meaning: '도덕 개념이 없는', example: 'The artificial intelligence system is <strong>amoral</strong>, lacking any sense of right or wrong.' },
-            { word: 'fungible', meaning: '대체 가능한', example: 'Money is <strong>fungible</strong> because one dollar bill can replace another.' },
-            { word: 'untenable', meaning: '지지할 수 없는', example: 'His position became <strong>untenable</strong> after the scandal was revealed.' },
-            { word: 'precludes', meaning: '~을 막다, 배제하다', example: 'The contract <strong>precludes</strong> any possibility of early termination.' },
-            { word: 'quantum', meaning: '양자, 상당한 양', example: '<strong>Quantum</strong> mechanics revolutionized our understanding of physics.' },
-            { word: 'repudiate', meaning: '거부하다', example: 'The government decided to <strong>repudiate</strong> the controversial agreement.' },
-            { word: 'deterministic', meaning: '결정론적인', example: 'The universe may not be as <strong>deterministic</strong> as classical physics suggested.' },
-            { word: 'cynicism', meaning: '냉소주의', example: 'Years of broken promises led to widespread <strong>cynicism</strong> among voters.' },
-            { word: 'electorate', meaning: '유권자 전체', example: 'The <strong>electorate</strong> showed their dissatisfaction in the recent election.' },
-            { word: 'imminent', meaning: '임박한', example: 'Scientists warned that climate disaster is <strong>imminent</strong> without immediate action.' },
-            { word: 'belies', meaning: '~을 거짓으로 나타내다', example: 'Her calm demeanor <strong>belies</strong> the anxiety she feels inside.' },
-            { word: 'disparate', meaning: '이질적인', example: 'The team brought together <strong>disparate</strong> perspectives from various fields.' },
-            { word: 'abrogate', meaning: '폐지하다', example: 'The new administration promised to <strong>abrogate</strong> the unpopular law.' },
-            { word: 'inimical', meaning: '~에 해로운', example: 'Such policies are <strong>inimical</strong> to economic growth.' },
-            { word: 'sovereignty', meaning: '주권', example: 'The nation fiercely guards its <strong>sovereignty</strong> against foreign interference.' },
-            { word: 'stymie', meaning: '좌절시키다', example: 'Bureaucratic red tape continues to <strong>stymie</strong> progress on the project.' },
-            { word: 'foreclose', meaning: '차단하다', example: 'This decision will <strong>foreclose</strong> any future negotiations.' },
-            { word: 'obviate', meaning: '제거하다, 방지하다', example: 'New technology may <strong>obviate</strong> the need for manual labor.' },
-            { word: 'disavow', meaning: '부인하다', example: 'The politician was quick to <strong>disavow</strong> any knowledge of the scandal.' },
-            { word: 'tenets', meaning: '교리, 신념', example: 'The basic <strong>tenets</strong> of democracy include freedom and equality.' },
-            { word: 'absurdity', meaning: '터무니없는 것', example: 'The <strong>absurdity</strong> of the situation became apparent to everyone.' },
-            { word: 'disillusionment', meaning: '환멸', example: 'The scandal led to widespread <strong>disillusionment</strong> with the political system.' },
-            { word: 'culpability', meaning: '과실 책임', example: 'The investigation will determine the <strong>culpability</strong> of each party involved.' },
-            { word: 'veracity', meaning: '진실성', example: 'Journalists must verify the <strong>veracity</strong> of their sources.' },
-            { word: 'unilateral', meaning: '일방적인', example: 'The <strong>unilateral</strong> decision angered the other committee members.' },
-            { word: 'desertification', meaning: '사막화', example: '<strong>Desertification</strong> threatens agricultural communities worldwide.' },
-            { word: 'unlikely', meaning: '있을 것 같지 않은', example: 'It\'s <strong>unlikely</strong> that we\'ll finish the project on time.' },
-            { word: 'concession', meaning: '양보, 인정', example: 'The union made a major <strong>concession</strong> during negotiations.' },
-            { word: 'terminology', meaning: '용어, 전문어', example: 'Medical <strong>terminology</strong> can be confusing for patients.' },
-            { word: 'tribunal', meaning: '재판소', example: 'The international <strong>tribunal</strong> will hear the war crimes case.' },
-            { word: 'platitude', meaning: '진부한 말', example: 'His speech was filled with empty <strong>platitudes</strong> rather than concrete solutions.' },
-            { word: 'betterment', meaning: '개선', example: 'We work for the <strong>betterment</strong> of our community.' },
-            { word: 'determination', meaning: '결심, 결단력', example: 'Her <strong>determination</strong> to succeed inspired everyone around her.' },
-            { word: 'unavailing', meaning: '무익한', example: 'All their efforts proved <strong>unavailing</strong> against the storm.' },
-            { word: 'remorse', meaning: '후회', example: 'He showed no <strong>remorse</strong> for his actions.' },
-            { word: 'immune', meaning: '면역의', example: 'No one is <strong>immune</strong> to criticism.' }
+            { word: 'disenfranchise', meaning: '선거권을 박탈당한', example: 'Many citizens were <strong>disenfranchised</strong> due to unfair voting laws.' }
         ];
         
         // 페이지 로드 시 외운 단어 표시
@@ -1778,10 +1456,6 @@
             }
             showCard(currentCardIndex);
             updateStats();
-        }
-        
-        function openQuizlet() {
-            window.open('https://quizlet.com/kr/1063542062/%EB%B6%80%EC%A0%95%EB%AC%B8-%EB%8B%A8%EC%96%B4-flash-cards/?i=4ai1m4&x=1qqt', '_blank');
         }
         
         function showCard(index) {
